@@ -1,0 +1,35 @@
+.section { padding-block: var(--space-7); background: #f3f5f5; }
+.heading { max-width: 64rem; margin: 0 auto 2.75rem; text-align: center; }
+.heading h2 { max-width: 56rem; margin: 0 auto 1.2rem; text-wrap: balance; }
+.heading > p:last-child { max-width: 43rem; margin: 0 auto; color: var(--ink-800); font-size: var(--type-body); line-height: 1.75; }
+.mosaic { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr) minmax(0, 1fr); grid-template-rows: 1fr 1fr; gap: 1rem; }
+.benefit { display: flex; flex-direction: column; justify-content: flex-start; gap: 1.5rem; padding: 2rem; border-radius: .9rem; background: white; min-height: 15.75rem; }
+.benefit0 { grid-area: 1 / 1; }
+.benefit1 { grid-area: 2 / 1; }
+.benefit2 { grid-area: 1 / 3; }
+.benefit3 { grid-area: 2 / 3; }
+.label { color: var(--blue-700); font-size: var(--type-meta); font-weight: 650; line-height: 1.6; }
+.benefit h3 { margin: 0 0 .7rem; font-size: 1.4375rem; line-height: 1.3; letter-spacing: -.035em; text-wrap: balance; }
+.benefit p { margin: 0; font-size: var(--type-body); color: var(--ink-800); line-height: 1.7; }
+.photo { grid-area: 1 / 2 / 3 / 3; position: relative; overflow: hidden; min-height: 32.5rem; border-radius: .9rem; background: #dbe7ed; }
+.photo img { object-fit: cover; object-position: 48% center; }
+.action { display: flex; justify-content: center; margin-top: 2rem; }
+.action a { min-height: 44px; font-size: var(--type-action); }
+@media (max-width: 1050px) {
+  .mosaic { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto; }
+  .benefit { min-height: 15.75rem; }
+  .benefit0 { grid-area: 1 / 1; }
+  .benefit1 { grid-area: 2 / 1; }
+  .benefit2 { grid-area: 3 / 1; }
+  .benefit3 { grid-area: 3 / 2; }
+  .photo { grid-area: 1 / 2 / 3 / 3; }
+}
+@media (max-width: 700px) {
+  .heading { margin-bottom: 2rem; }
+  .mosaic { display: flex; flex-direction: column; }
+  .benefit { min-height: auto; padding: 1.6rem; gap: 1.25rem; }
+  .benefit h3 { font-size: 1.375rem; }
+  .photo { order: -1; min-height: 0; aspect-ratio: 1.05; }
+  .photo img { object-position: 48% 32%; }
+  .action { margin-top: 1.5rem; }
+}

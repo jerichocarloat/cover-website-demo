@@ -1,0 +1,250 @@
+.figure {
+  --rsg-cycle: 13.5s;
+  --rsg-ink: #082b3b;
+  --rsg-accent: #00658c;
+  --rsg-rule: rgba(0, 101, 140, .27);
+  position: relative;
+  width: 100%;
+  height: var(--rsg-height, 460px);
+  margin: 0;
+  isolation: isolate;
+  color: var(--rsg-ink);
+}
+
+.figure[data-tone="dark"] {
+  --rsg-ink: #fff;
+  --rsg-accent: #c8edff;
+  --rsg-rule: rgba(200, 237, 255, .28);
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.connections {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  stroke: var(--rsg-rule);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.word {
+  position: absolute;
+  z-index: 2;
+  font-size: clamp(54px, 4.8vw, 78px);
+  line-height: 1;
+  letter-spacing: -.07em;
+  font-weight: 800;
+  transform: translate(-50%, -50%);
+}
+
+.word0 { left: 25%; top: 38%; }
+.word1 { left: 73%; top: 43%; font-size: clamp(48px, 4.35vw, 71px); }
+.word2 { left: 50%; top: 69%; }
+
+.word span {
+  display: block;
+  opacity: .57;
+  transform: scale(.86);
+  transform-origin: center;
+}
+.word small { display:block; max-width:19ch; margin:12px auto 0; text-align:center; color:var(--rsg-accent); font-size:11px; font-weight:500; letter-spacing:0; line-height:1.4; }
+.word { text-align:center; }
+
+.cloud {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.term {
+  position: absolute;
+  white-space: nowrap;
+  font-size: clamp(12px, .95vw, 15px);
+  line-height: 1.3;
+  letter-spacing: -.02em;
+  font-weight: 500;
+  color: var(--rsg-accent);
+}
+
+.cloud0 .term0 { left: 9%; top: 18%; }
+.cloud0 .term1 { left: 31%; top: 10%; }
+.cloud0 .term2 { left: 6%; top: 59%; }
+.cloud0 .term3 { left: 7%; top: 48%; }
+.cloud0 .term4 { left: 39%; top: 24%; }
+
+.cloud1 .term0 { left: 63%; top: 11%; }
+.cloud1 .term1 { left: 72%; top: 24%; }
+.cloud1 .term2 { left: 72%; top: 59%; }
+.cloud1 .term3 { left: 58%; top: 26%; }
+.cloud1 .term4 { left: 88%; top: 69%; }
+
+.cloud2 .term0 { left: 15%; top: 81%; }
+.cloud2 .term1 { left: 37%; top: 84%; }
+.cloud2 .term2 { left: 45%; top: 54%; }
+.cloud2 .term3 { left: 75%; top: 77%; }
+.cloud2 .term4 { left: 65%; top: 87%; }
+.cloud2 .term5 { left: 15%; top: 68%; }
+
+.systemLabel {
+  position: absolute;
+  left: 4%;
+  bottom: 4%;
+  max-width: 52%;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .055em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--rsg-accent);
+}
+
+.figure[data-ready="true"][data-reduced="false"] .word span {
+  animation: wordFocus var(--rsg-cycle) var(--ease-in-out, cubic-bezier(.77, 0, .175, 1)) infinite;
+}
+
+.figure[data-ready="true"][data-reduced="false"] .cloud {
+  animation: cloudFocus var(--rsg-cycle) var(--ease-out, cubic-bezier(.23, 1, .32, 1)) infinite;
+}
+
+.figure .word1 span,
+.figure .cloud1 { animation-delay: -9s !important; }
+.figure .word2 span,
+.figure .cloud2 { animation-delay: -4.5s !important; }
+
+.figure[data-paused="true"] .word span,
+.figure[data-paused="true"] .cloud,
+.figure:focus-within .word span,
+.figure:focus-within .cloud {
+  animation-play-state: paused !important;
+}
+
+@keyframes wordFocus {
+  0%, 25.93%, 100% { opacity: 1; transform: scale(1.07); }
+  33.33%, 92.6% { opacity: .57; transform: scale(.86); }
+}
+
+@keyframes cloudFocus {
+  0%, 25.93%, 100% { opacity: 1; transform: translateY(0); }
+  33.33% { opacity: 0; transform: translateY(-6px); }
+  34%, 92.6% { opacity: 0; transform: translateY(6px); }
+}
+
+.control {
+  position: absolute;
+  right: 4%;
+  bottom: 3%;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 7px 12px;
+  border: 1px solid var(--rsg-rule);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--rsg-ink);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.control:focus-visible {
+  outline: 2px solid var(--rsg-accent);
+  outline-offset: 4px;
+}
+
+.control:disabled { cursor: default; opacity: .7; }
+
+.staticComposition {
+  display: none;
+  height: calc(100% - 56px);
+  padding: 20px 6%;
+  align-content: center;
+}
+
+.staticArea {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rsg-rule);
+}
+
+.staticArea:last-child { border-bottom: 0; }
+.staticArea strong { font-size: clamp(36px, 4.4vw, 64px); font-weight: 800; line-height: 1; letter-spacing: -.065em; }
+.staticArea span { display: block; color: var(--rsg-accent); font-size: 13px; font-weight: 600; line-height: 1.5; }
+.staticArea p { margin: 7px 0 0; font-size: 11px; line-height: 1.6; color: var(--rsg-ink); }
+
+.figure[data-ready="false"] .stage,
+.figure[data-reduced="true"] .stage { display: none; }
+.figure[data-ready="false"] .staticComposition,
+.figure[data-reduced="true"] .staticComposition { display: grid; }
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .figure:hover .word span,
+  .figure:hover .cloud { animation-play-state: paused !important; }
+  .control:hover { background: rgba(0, 157, 225, .08); }
+}
+
+@media (max-width: 600px) {
+  .figure { height: 360px; }
+  .word { font-size: 51px; }
+  .word0 { left: 26%; top: 34%; }
+  .word1 { left: 73%; top: 44%; font-size: 43px; }
+  .word2 { left: 49%; top: 68%; font-size: 55px; }
+  .word small { font-size:9px; margin-top:8px; max-width:15ch; }
+  .term { font-size: 11px; }
+  .cloud .term4, .cloud .term5 { display: none; }
+  .cloud0 .term0 { left: 7%; top: 16%; }
+  .cloud0 .term1 { left: 33%; top: 10%; }
+  .cloud0 .term2 { left: 4%; top: 57%; }
+  .cloud0 .term3 { left: 35%; top: 47%; }
+  .cloud1 .term0 { left: 58%; top: 13%; }
+  .cloud1 .term1 { left: 75%; top: 28%; }
+  .cloud1 .term2 { left: 66%; top: 58%; }
+  .cloud1 .term3 { left: 38%; top: 25%; }
+  .cloud2 .term0 { left: 7%; top: 80%; }
+  .cloud2 .term1 { left: 26%; top: 86%; }
+  .cloud2 .term2 { left: 31%; top: 49%; }
+  .cloud2 .term3 { left: 76%; top: 76%; }
+  .systemLabel { font-size: 9px; max-width: 55%; bottom: 4%; }
+  .control { bottom: 2%; font-size: 11px; padding: 7px 10px; }
+  .staticComposition { padding: 10px 3%; }
+  .staticArea { grid-template-columns: 36% 1fr; gap: 14px; padding: 17px 0; }
+  .staticArea strong { font-size: 36px; }
+  .staticArea span { font-size: 11px; }
+  .staticArea p { font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure .stage { display: none; }
+  .figure .staticComposition { display: grid; }
+  .figure .word span,
+  .figure .cloud { animation: none !important; transform: none; }
+}
