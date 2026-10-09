@@ -81,7 +81,7 @@ export default function ServicesPage() {
       <div className="shell">
         <div className={`${styles.chapterGrid} ${styles.reverse}`}>
           <Reveal className={styles.copy} group><p className="eyebrow">04 / Marketing und Kundenentwicklung</p><h2 id="marketing-growth-title">Mehr aus Ihren<br />Kundenbeziehungen machen.</h2><p className={styles.lead}>Unterstützung, die bei den Kunden ansetzt, die Sie bereits kennen.</p><p>COVER unterstützt Bestandskundenmarketing, die Rückgewinnung von Abonnenten und die Gewinnung von Interessenten. Kundenwissen und verbundene Software helfen Ihrem Team, die richtigen Menschen mit relevanterer Kommunikation zu erreichen.</p><TaskList items={["Bestandskundenmarketing und Kundenpflege", "Abonnentenbindung und Reaktivierung", "Unterstützung bei der Interessentengewinnung"]} /><Link href="/kontakt" className="text-link">Kundenentwicklung besprechen <ArrowIcon direction="up-right" /></Link></Reveal>
-          <DetailPhoto src="/photos/cover-commerce-v6.jpg" alt="Eine Person nutzt einen Onlineshop am Laptop" />
+          <DetailPhoto src="/photos/publisher-bookshop.webp" alt="Ein Onlineshop für Bücher und Magazine auf einem Laptop, daneben gedruckte Publikationen" />
         </div>
         <div className={styles.growthPath} aria-label="Wie Technologie das Kundenmarketing unterstützt">
           <div><span>01 / Verstehen</span><h3>Ihre Kunden kennen.</h3><p>Die Kontakthistorie im CRM und die Kundensegmentierung helfen, relevante Zielgruppen zu erkennen.</p></div>

@@ -7,7 +7,7 @@ import RevealGroup from "./RevealGroup";
 const products = [
   { name: "ERP", label: "Das Verlagsgeschäft steuern", image: "/photos/cover-erp-v6.jpg", alt: "Rechnungen, ein Taschenrechner und kaufmännische Unterlagen", text: "Verwalten Sie Produkte, Abonnements, Aufträge und Finanzen – vom ersten Angebot bis zur Rechnung.", href: "/plattform#erp", detail: "Verlagsprozesse" },
   { name: "CRM", label: "Ihre Kunden verstehen", image: "/photos/cover-service-2-v6.jpg", alt: "Diagramme und eine Lupe veranschaulichen die Analyse von Kundendaten", text: "Führen Sie Kundendaten, Kontakthistorien und Kampagnenaktivitäten zusammen. Nutzen Sie Ihr Wissen für eine relevantere Kundenansprache.", href: "/plattform#crm", detail: "Kunden und Kampagnen" },
-  { name: "E-Commerce", label: "Print und Digitales verkaufen", image: "/photos/cover-commerce-v6.jpg", alt: "Ein Onlineshop und eine Karte für einen Onlinekauf", text: "Verkaufen Sie Bücher, Abonnements und digitale Produkte. Bieten Sie Ihren Lesern ein Kundenportal. Hosting und Updates übernimmt COVER.", href: "/plattform#commerce", detail: "Shops und Kundenportale" },
+  { name: "E-Commerce", label: "Print und Digitales verkaufen", image: "/photos/publisher-bookshop.webp", alt: "Ein Onlineshop für Bücher und Magazine auf einem Laptop", text: "Verkaufen Sie Bücher, Abonnements und digitale Produkte. Bieten Sie Ihren Lesern ein Kundenportal. Hosting und Updates übernimmt COVER.", href: "/plattform#commerce", detail: "Shops und Kundenportale" },
 ] as const;
 
 export default function SoftwareOverview() {

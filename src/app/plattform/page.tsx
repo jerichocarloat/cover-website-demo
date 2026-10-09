@@ -95,7 +95,7 @@ export default function PlatformPage() {
     <section id="commerce" className={styles.chapter} aria-labelledby="commerce-title"><div className="shell">
       <div className={styles.chapterGrid}>
         <Reveal className={styles.copy} group><p className="eyebrow">03 / E-Commerce</p><h2 id="commerce-title">Kaufen und abonnieren.<br />Einfacher gemacht.</h2><p className={styles.lead}>Ein Onlineshop, der Verlage versteht.</p><p>Verkaufen Sie Bücher, Abonnements und digitale Produkte über eine verlagsspezifische Plattform. Geben Sie Ihren Kunden einen Ort zum Kaufen, zum Abrufen digitaler Dokumente und zur Verwaltung ihrer Kundenbeziehung.</p><TaskList items={["Gedruckte und digitale Produkte online verkaufen", "Shops, Landingpages und Kundenportale erstellen", "Hosting, Updates und Betrieb COVER überlassen"]} /><Link href="/kontakt" className="text-link">Ihren Onlinevertrieb besprechen <ArrowIcon direction="up-right" /></Link></Reveal>
-        <DetailPhoto src="/photos/cover-commerce-v6.jpg" alt="Eine Person kauft online mit einem Laptop und einer Zahlungskarte ein" />
+        <DetailPhoto src="/photos/publisher-bookshop.webp" alt="Ein Onlineshop für Bücher und Magazine auf einem Laptop, daneben gedruckte Publikationen" />
       </div>
       <div className={styles.featureGrid}>
         {[

@@ -15,6 +15,8 @@ Die Bilder dienen der Illustration des Präsentationskonzepts. Abgebildete Perso
 
 `publishing-team-editorial-v3.webp` und `customer-support-editorial-v3.webp` wurden am 8. Oktober 2026 ohne Referenzbilder generiert. Sie zeigen illustrative Szenen, keine tatsächlichen COVER Teams.
 
+`publisher-bookshop.webp` wurde am 9. Oktober 2026 ohne Referenzbilder mit der integrierten Bildgenerierung erzeugt. Das Bild zeigt einen illustrativen Onlineshop für Bücher und Magazine, keine tatsächliche COVER Softwareoberfläche. Auflösung: 1536 × 1024 Pixel. Es ersetzt die bisher verwendete allgemeine Marktplatzaufnahme in den Services, im E-Commerce-Abschnitt und in der Softwareübersicht.
+
 ## Offizielle COVER Inhalte und Kundenlogos
 
 Diese Inhalte stammen von der offiziellen COVER Website und wurden für das angefragte COVER Konzept übernommen. Die öffentliche Verfügbarkeit stellt keine allgemeine freie Nutzungslizenz dar. Marken und Kundenlogos bleiben Eigentum ihrer jeweiligen Rechteinhaber; für eine weitere Verwendung sind die erforderlichen Rechte zu klären.
