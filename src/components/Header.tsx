@@ -9,7 +9,7 @@ import { cssTimeMs } from "@/lib/motion";
 const navigation = [
   { label: "Software", href: "/plattform" },
   { label: "Services", href: "/services" },
-  { label: "Unternehmen", href: "/unternehmen" },
+  { label: "Über uns", href: "/unternehmen" },
   { label: "Kontakt", href: "/kontakt" },
 ] as const;
 

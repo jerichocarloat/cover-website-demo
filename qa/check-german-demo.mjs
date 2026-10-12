@@ -128,7 +128,7 @@ for (const [route, page] of pages) {
       }
     }
   }
-  for (const label of ["Unternehmen", "Kontakt", "Zum Inhalt springen", "Verlagssoftware", "Spezialisierte Services"]) {
+  for (const label of ["Über uns", "Kontakt", "Zum Inhalt springen", "Verlagssoftware", "Spezialisierte Services"]) {
     assert(page.text.includes(label), `${route}: German shared label ${label}`);
   }
   const accessibilityText = [...tags(page.html, "img"), ...tags(page.html, "a"), ...tags(page.html, "button"), ...tags(page.html, "nav"), ...tags(page.html, "dialog"), ...tags(page.html, "section")].flatMap(tag => [tag.alt || "", tag["aria-label"] || "", tag.title || ""]).join(" ");

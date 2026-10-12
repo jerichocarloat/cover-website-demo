@@ -19,8 +19,8 @@ export default function Footer() {
           <Link href="/plattform#commerce">E-Commerce</Link>
           <Link href="/services">Spezialisierte Services</Link>
         </nav>
-        <nav aria-label="Unternehmen im Footer">
-          <h3>Unternehmen</h3>
+        <nav aria-label="Über uns im Footer">
+          <h3>Über uns</h3>
           <Link href="/unternehmen">Über COVER</Link>
           <Link href="/news">Aktuelles</Link>
           <Link href="/kontakt">Kontakt</Link>
